@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Show Nth Line</title>
+    <title>Append Content</title>
 </head>
 
 <style>
@@ -30,28 +30,31 @@
                 <div class="card ">
                 <center>
                     <div class="card-header jumbotron">
-                        <h3 class="h3Class">Show Nth Line</h3>
+                        <h3 class="h3Class">Append Content</h3>
                     </div>
                     <div class="card-body">
-                   
-                       
-                           
+
                                <div style="padding-bottom:25px;">
                                <?php 
+                                   
+                                    $file= fopen("ext.txt","w");
+                                    $content ="when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create. ― Why The Lucky Stiff";
+                                    fwrite($file,$content);
+                                    fclose($file);
+                                    echo file_get_contents("text.txt");
 
-                              
-                                function showLineContent($fileName,$fileLine){
+                                // function showLineContent($fileName,$fileLine){
                                 
-                                    if (file_exists($fileName)) {
-                                        $file = file($fileName); 
-                                        echo $file[$fileLine-1]; 
-                                    }  else{
-                                        echo $fileName." doesn't exist";
-                                    }
+                                //     if (file_exists($fileName)) {
+                                //         $file = file($fileName); 
+                                //         echo $file[$fileLine-1]; 
+                                //     }  else{
+                                //         echo $fileName." doesn't exist";
+                                //     }
                                      
-                                }
+                                // }
 
-                                showLineContent("sampleText.txt",16);
+                                // showLineContent("sampleText.txt",16);
 
                                     ?>
                                </div>
