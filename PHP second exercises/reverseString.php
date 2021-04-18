@@ -44,6 +44,10 @@
                                 <?php
                                      if(isset($_GET["reverse"])){
                                         $getInput = $_GET['string'];
+                                        reverseString($getInput);
+                                        
+                                     }
+                                     function reverseString($getInput){
                                         $reverseString = strrev($getInput);
                                         $stringLen = strlen($reverseString);
                                         if ( $stringLen%2==0){

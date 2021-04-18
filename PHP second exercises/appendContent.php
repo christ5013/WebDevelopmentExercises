@@ -34,30 +34,62 @@
                     </div>
                     <div class="card-body">
 
-                               <div style="padding-bottom:25px;">
-                               <?php 
-                                   
-                                    $file= fopen("ext.txt","w");
-                                    $content ="when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create. ― Why The Lucky Stiff";
-                                    fwrite($file,$content);
-                                    fclose($file);
-                                    echo file_get_contents("text.txt");
+                            <div style="padding-bottom:25px;">
+                            <?php
+                            //     function appendLine($file,$data,$lineNum)  {
+ 
+                            //         $fp = fopen( $file, 'a' ); 
+                                    
+                                    
+                                         
+                            //             // $fp = fopen($file, '');
+                            //              $counter = 0;
+                            //              while (!feof($fp)) {
+                            //                $counter++;
+                                            
+                            //                if ($counter == $lineNum){
+                            //                  //return $line;
+                                             
+                            //                }
+                                           
+                            //              }
+                                  
+                            //             fwrite( $fp, $data);
+                                  
+                            //       }
+                            //       echo appendLine("text.txt","insert me",1);
+                            //   // $myFile = "text.txt"; 
 
-                                // function showLineContent($fileName,$fileLine){
-                                
-                                //     if (file_exists($fileName)) {
-                                //         $file = file($fileName); 
-                                //         echo $file[$fileLine-1]; 
-                                //     }  else{
-                                //         echo $fileName." doesn't exist";
-                                //     }
-                                     
-                                // }
 
-                                // showLineContent("sampleText.txt",16);
+                              // $fh = fopen($myFile, 'r');
 
-                                    ?>
-                               </div>
+                               //while ((feof ($fh) === false) )
+                              // {
+                               
+                               //$theData = fgets($fh);
+                               
+                               //echo $theData.$fh[1];
+                               
+                              // }
+                               
+                           
+                              
+                               $lineNumber=1;
+                               $fileOpen= fopen("text.txt","a");
+                               $content =' secret';
+                               $file=file("text.txt");
+
+                                if (!feof($fileOpen)){
+
+                                    $getLine = $file[$lineNumber];
+                                    fwrite($fileOpen,$content);
+
+                               }
+                                  
+                                fclose($fileOpen);
+
+                            ?>
+                            </div>
                         
                         
                     </div>

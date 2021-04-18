@@ -44,8 +44,10 @@
                                 <?php
                                      if(isset($_GET["check"])){
                                         $getInput = $_GET['number'];
+                                        primeNumber($getInput);
+                                     }
+                                     function primeNumber($getInput){
                                         $counter = 0;
-
                                         for($ctr=$getInput-1; $ctr > 0; $ctr--){
                                             if($getInput % $ctr ==0){
                                                  $counter++;

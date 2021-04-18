@@ -45,6 +45,10 @@
                                      if(isset($_GET["test"])){
 
                                         $getInput = $_GET['string'];
+                                        testLoyalty($getInput);
+                                     }
+                                     
+                                     function testLoyalty($getInput){
                                         $inputToUpper = strtoupper($getInput);
                                         $counter =0;
 

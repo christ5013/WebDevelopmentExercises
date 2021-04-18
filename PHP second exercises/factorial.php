@@ -42,21 +42,29 @@
 <br>
 <hr>
 <?php
+
     if(isset($_GET["convert"])){
         $getInput = $_GET['number'];
-
-        if ($getInput<0){
-            $getInput = abs($getInput);
-            echo "<center> Absolute Value :  $getInput ";
-        }else{  
-            for ($ctr =$getInput-1;$ctr >0 ;$ctr--){
-                $getInput*=$ctr;
-            } 
-            echo "<center>Factorial :  $getInput ";  
-        }
-        
-       
+        factorial($getInput);
     }
+    
+    function factorial($getInput){
+       
+            if ($getInput<0){
+                $getInput = abs($getInput);
+                echo "<center> Absolute Value :  $getInput ";
+            }else{  
+                for ($ctr =$getInput-1;$ctr >0 ;$ctr--){
+                    $getInput*=$ctr;
+                } 
+                echo "<center>Factorial :  $getInput ";  
+            }
+            
+        
+        
+    }
+   
+        
 ?>
 </div>
 
