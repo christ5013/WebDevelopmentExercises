@@ -36,58 +36,24 @@
 
                             <div style="padding-bottom:25px;">
                             <?php
-                            //     function appendLine($file,$data,$lineNum)  {
- 
-                            //         $fp = fopen( $file, 'a' ); 
-                                    
-                                    
-                                         
-                            //             // $fp = fopen($file, '');
-                            //              $counter = 0;
-                            //              while (!feof($fp)) {
-                            //                $counter++;
-                                            
-                            //                if ($counter == $lineNum){
-                            //                  //return $line;
-                                             
-                            //                }
-                                           
-                            //              }
-                                  
-                            //             fwrite( $fp, $data);
-                                  
-                            //       }
-                            //       echo appendLine("text.txt","insert me",1);
-                            //   // $myFile = "text.txt"; 
+           
 
+                                function appendContent($fileName, $content, $lineNumber){
+                                    if(file_exists($fileName)){
 
-                              // $fh = fopen($myFile, 'r');
+                                        $file = fopen($fileName, 'a');
+                                        $lines = file ($fileName, FILE_IGNORE_NEW_LINES);
+                                        array_splice($lines, $lineNumber-1, 0, $content);
+                                        file_put_contents($fileName, join("\n", ($lines)));
+                                        echo "Successfully added";
+                                    fclose($file);
 
-                               //while ((feof ($fh) === false) )
-                              // {
-                               
-                               //$theData = fgets($fh);
-                               
-                               //echo $theData.$fh[1];
-                               
-                              // }
-                               
+                                    }
+                                }      
+                                appendContent('text.txt', 'Arigato gozaimasu',5);
+
+                                
                            
-                              
-                               $lineNumber=1;
-                               $fileOpen= fopen("text.txt","a");
-                               $content =' secret';
-                               $file=file("text.txt");
-
-                                if (!feof($fileOpen)){
-
-                                    $getLine = $file[$lineNumber];
-                                    fwrite($fileOpen,$content);
-
-                               }
-                                  
-                                fclose($fileOpen);
-
                             ?>
                             </div>
                         
