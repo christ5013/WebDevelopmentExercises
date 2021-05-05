@@ -144,7 +144,7 @@ table,tr,th,td{
                  <thead>
 
                      <tr>
-                         <th></th>
+                         
                         <th>𝐓𝐀𝐒𝐊</th>
                         <th>𝐃𝐀𝐓𝐄 𝐓𝐇𝐑𝐎𝐖𝐍</th>
                         <th></th>
@@ -160,7 +160,7 @@ table,tr,th,td{
                         ?>
                     <tr>
                             <!-- data-toggle="modal" data-target="#exampleModalCenter" -->
-                    </td>
+                   
                     <td id="todotask" class="name">
                         <?php echo $row['task'] ?>
                     </td>
